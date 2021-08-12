@@ -3,7 +3,7 @@
   <div>
     <nav class="p-6 border-b border-gray-300">
       <NuxtLink to="/" class="mr-6">
-        Home
+        Inicio
       </NuxtLink>
       <NuxtLink to="/profile" class="mr-6">
         Perfil

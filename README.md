@@ -69,3 +69,8 @@ export default (_, inject) => {
 ```sh
 npm run dev
 ```
+
+## References
+- https://blog.logrocket.com/ultimate-guide-authentication-vue-js-supabase/
+- https://supabase.io/
+- https://vercel.com/
