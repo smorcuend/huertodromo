@@ -3,7 +3,14 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "bump": "npm run bump:patch",
+    "bump:major": "npm version major -m 'Bump version: %s';",
+    "bump:minor": "npm version minor -m 'Bump version: %s';",
+    "bump:patch": "npm version patch -m 'Bump version: %s';",
+    "preversion": "git checkout master && git pull origin master --tags",
+    "version": "git add package.json",
+    "postversion": "rm -rf dist/"
   },
   "name": "nuxt-supabase",
   "version": "1.0.0",
