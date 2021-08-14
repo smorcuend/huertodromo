@@ -1,31 +1,50 @@
 <template>
   <main>
-    <div v-for="post in posts" :key="post.id">
-      <NuxtLink key={post.id} :to="`/posts/${post.id}`">
-        <div class="cursor-pointer border-b border-gray-300	mt-8 pb-4">
-          <h2 class="text-xl font-semibold">{{ post.title }}</h2>
-          <p class="text-gray-500 mt-2">Author: {{ post.user_email }}</p>
+    <section class="hero is-white">
+      <div class="hero-body">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <div class="media tile">
+              <div class="media-left">
+                <img src="/logo.jpeg" class="b-image" alt="Logo huertodromo" />
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p class="title m-6">
+                    Nace como un espacio abierto en Toledo para sembrar y cosechar convivencia, respeto, aprecio,
+                    conciencia ecológica, manejo de residuos y conservación del entorno. Este
+                    espacio se gestiona con decisiones y trabajo colectivo, donde aprendemos todos
+                    de todos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </NuxtLink>
-    </div>
-    <h1 v-if="loaded && !posts.length" class="text-2xl">No posts...</h1>
+      </div>
+    </section>
+    <section>
+      <Carousel />
+    </section>
+    <section>
+      <Posts />
+    </section>
   </main>
 </template>
 
 <script>
+import Carousel from '../components/Carousel.vue';
+import Posts from '../components/Posts.vue';
 export default {
-  async created() {
-    const { data: posts, error } = await this.$supabase
-      .from('posts')
-      .select('*')
-    this.posts = posts
-    this.loaded = true
-  },
+  components: { Carousel, Posts },
   data() {
-    return {
-      loaded: false,
-      posts: []
-    }
+    return {};
   }
-}
+};
 </script>
+<style scoped>
+.b-image {
+  max-height: 300px;
+  width: auto;
+}
+</style>

@@ -1,53 +1,34 @@
 <!-- layouts/default.vue -->
 <template>
-  <div>
-    <nav class="p-6 border-b border-gray-300">
-      <NuxtLink to="/" class="mr-6">
-        Inicio
-      </NuxtLink>
-      <NuxtLink to="/profile" class="mr-6">
-        Perfil
-      </NuxtLink>
-      <NuxtLink to="/create-post" class="mr-6" v-if="authenticated">
-        Crear entrada
-      </NuxtLink>
-      <NuxtLink to="/my-posts" class="mr-6" v-if="authenticated">
-        Mis entradas
-      </NuxtLink>
-    </nav>
-    <div class="py-8 px-16">
-      <Nuxt />
-    </div>
+  <div class="container is-fullhd">
+    <NavBar />
+    <Nuxt />
+    <Footer />
   </div>
 </template>
-
-<script>
-export default {
-  data: () => ({
-    authenticated: false,
-    authListener: null
-  }),
-  async mounted() {
-    /* When the app loads, check to see if the user is signed in */
-    /* also create a listener for when someone signs in or out */
-    const { data: authListener } = this.$supabase.auth.onAuthStateChange(
-      () => this.checkUser()
-    )
-    this.authListener = authListener
-    this.checkUser()
-  },
-  methods: {
-    async checkUser() {
-      const user = await this.$supabase.auth.user()
-      if (user) {
-        this.authenticated = true 
-      } else {
-        this.authenticated = false
-      }
-    }
-  },
-  beforeUnmount() {
-    this.authListener?.unsubscribe()
+<style lang="scss">
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url('/huertodromo_bg.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 0.2;
   }
 }
-</script>
+</style>
