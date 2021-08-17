@@ -8,6 +8,9 @@
         <NuxtLink to="/agenda"> Agenda </NuxtLink>
       </b-navbar-item>
       <b-navbar-item href="#">
+        <NuxtLink to="/whoarewe"> Quienes somos </NuxtLink>
+      </b-navbar-item>
+      <b-navbar-item href="#">
         <NuxtLink to="/where"> Dónde estamos </NuxtLink>
       </b-navbar-item>
       <b-navbar-item href="#">

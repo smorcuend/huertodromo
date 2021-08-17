@@ -12,6 +12,9 @@
       <div class="box text-center">
         <h1 v-if="loaded && !posts.length">No hay información aún...</h1>
       </div>
+      <div class="box text-center">
+        <h2><a href="https://huertodromopoligonoentoledo.blogspot.com/"> Puedes consultar eventos pasados en la antigua web </a></h2>
+      </div>
     </section>
   </main>
 </template>

@@ -1,9 +1,11 @@
 <!-- layouts/default.vue -->
 <template>
-  <div class="container is-fullhd">
+  <div class="wrapper">
     <NavBar />
-    <Nuxt />
-    <Footer />
+    <div id="main" class="container is-fullhd">
+      <Nuxt class="mt-6 mb-6"/>
+    </div>
+    <Footer id="footer" class=" pt-6 pb-6" />
   </div>
 </template>
 <style lang="scss">
@@ -11,10 +13,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  position: relative;
   &:after {
     content: '';
     position: absolute;
@@ -30,5 +28,16 @@ body {
     background-color: rgba(255, 255, 255, 0.3);
     opacity: 0.2;
   }
+}
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#main {
+  flex: 1;
+}
+#footer {
+  align-content: flex-end;
 }
 </style>

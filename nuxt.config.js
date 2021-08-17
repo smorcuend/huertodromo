@@ -8,7 +8,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Huertodromo, huerto, comunitario, comunidad, agroecología, Toledo, ecología' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Huertodromo, huerto, comunitario, comunidad, agroecología, Toledo, ecología'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -17,7 +21,11 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['simplemde/dist/simplemde.min.css'],
 
-  plugins: [{ src: '~plugins/client.js' }, { src: '~plugins/simplemde.js', mode: 'client' }],
+  plugins: [
+    { src: '~plugins/client.js' },
+    { src: '~plugins/simplemde.js', mode: 'client' },
+    { src: '~plugins/vuecal.js' }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -29,7 +37,7 @@ export default {
   modules: [
     // Simple usage
     'nuxt-buefy',
-    'nuxt-leaflet',
+    'nuxt-leaflet'
 
     // Or you can customize
     // ['nuxt-buefy', { css: false, materialDesignIcons: false }]
