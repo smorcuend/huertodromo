@@ -14,11 +14,12 @@
 </template>
 
 <script>
+const PHOTO_ALBUM_SIZE = 21;
 export default {
   name: 'Carousel',
   data() {
     return {
-      items: [...Array(18).keys()].map((i) => ({ id: i, src: `./photo${i}.jpg` }))
+      items: [...Array(PHOTO_ALBUM_SIZE).keys()].map((i) => ({ id: i, src: `./photo${i}.jpg` }))
     };
   }
 };

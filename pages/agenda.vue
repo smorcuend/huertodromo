@@ -4,8 +4,7 @@
       <h1 class="title">Agenga</h1>
       <div class="columns">
         <div class="column">
-          En construcción...
-          <!-- <vue-cal
+          <vue-cal
             :time-from="9 * 60"
             :disable-views="['years', 'year']"
             active-view="month"
@@ -15,7 +14,7 @@
             style="height: 600px"
             locale="es"
           >
-          </vue-cal> -->
+          </vue-cal>
         </div>
       </div>
     </section>
@@ -23,9 +22,9 @@
 </template>
 
 <script>
-// import vuecal from 'vue-cal';
+import vuecal from 'vue-cal';
 export default {
-  // components: { 'vue-cal': vuecal },
+  components: { 'vue-cal': vuecal },
   async created() {},
   data() {
     return {

@@ -14,7 +14,7 @@
         <br />
         Creado con <b-icon icon="heart" size="is-small"></b-icon> por
       </strong>
-      <a href="https://github.com/smorcuend/huertodromo">Sergio y Mery</a>. <br />
+      <a href="https://github.com/smorcuend/huertodromo">Sergio</a>. <br />
       El código fuente está publicado bajo licencia
       <a href="https://es.wikipedia.org/wiki/GNU_General_Public_License">GPLv2</a>.
     </p>

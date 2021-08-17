@@ -49,12 +49,4 @@ export default {
     SUPABASE_URL: process.env.SUPABASE_URL || 'http://localhost:3000',
     SUPABASE_KEY: process.env.SUPABASE_KEY || ''
   }
-  // publicRuntimeConfig: {
-  //   SUPABASE_URL: process.env.SUPABASE_URL || 'http://localhost:3000',
-  //   SUPABASE_KEY: process.env.SUPABASE_KEY || ''
-  // },
-  // privateRuntimeConfig: {
-  //   SUPABASE_URL: process.env.SUPABASE_URL || 'http://localhost:3000',
-  //   SUPABASE_KEY: process.env.SUPABASE_KEY || ''
-  // }
 };

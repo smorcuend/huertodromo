@@ -1,40 +1,24 @@
 <template>
-  <b-navbar fixed-top centered type="is-success" shadow>
+  <b-navbar fixed-top centered type="is-success">
     <template #start>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <NuxtLink to="/"> Inicio </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item href="#">
-        <NuxtLink to="/agenda"> Agenda </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item href="#">
-        <NuxtLink to="/whoarewe"> Quienes somos </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item href="#">
-        <NuxtLink to="/where"> Dónde estamos </NuxtLink>
-      </b-navbar-item>
-      <b-navbar-item href="#">
-        <NuxtLink to="/library"> Biblioteca </NuxtLink>
-      </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ path: '/' }"> Inicio </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ path: 'agenda' }"> Agenda </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'whoarewe' }"> Quienes somos </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'where' }"> Dónde estamos </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'library' }"> Biblioteca </b-navbar-item>
       <b-navbar-dropdown label="Editar" v-if="authenticated">
-        <b-navbar-item href="#">
-          <NuxtLink to="/my-posts"> Mis entradas </NuxtLink>
+        <b-navbar-item tag="router-link" :to="{ name: 'my-posts' }"> Mis entradas </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'create-post' }">
+          Crear entrada
         </b-navbar-item>
-        <b-navbar-item href="#">
-          <NuxtLink to="/create-post"> Crear entrada </NuxtLink>
-        </b-navbar-item>
-        <b-navbar-item href="#">
-          <NuxtLink to="/profile"> Perfil </NuxtLink>
-        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'profile' }"> Perfil </b-navbar-item>
       </b-navbar-dropdown>
     </template>
 
     <template #end>
       <b-navbar-item tag="div">
         <div class="buttons">
-          <a class="button is-light">
-            <NuxtLink to="/profile"> Iniciar sesión </NuxtLink>
-          </a>
+          <a class="button is-light" href="/profile"> Iniciar sesión </a>
         </div>
       </b-navbar-item>
     </template>
