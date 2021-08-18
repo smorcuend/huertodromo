@@ -3,13 +3,20 @@
     <h1 class="title">Donde estamos</h1>
     <div class="columns">
       <div class="column">
-        <p class="card p-4">
+        <div class="card p-4">
+          <h2 class="card-title subtitle mt-4">Localización:</h2>
           Parte trasera del velódromo, C/Valdemaría s/n <br />
           Polígono Sta María de Benquerencia - Toledo (45007)
-        </p>
+        </div>
         <div class="card p-4 mt-4">
           <h2 class="card-title subtitle mt-4">Contacto:</h2>
-          <p><a href="mailto:huertodromotoledo@gmail.com">huertodromotoledo@gmail.com</a></p>
+          <p>
+            Si estás interesado en participar, visitarnos o simplemente conocer un poco más de este
+            proyecto comunitario puedes acercarte los jueves a las 16:30 al huertódromo ó
+            escribirnos al correo: <a href="mailto:huertodromotoledo@gmail.com">huertodromo@gmail.com</a>
+            <br>
+            Te esperamos!
+          </p>
         </div>
       </div>
       <div class="column">

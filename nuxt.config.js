@@ -15,7 +15,10 @@ export default {
       },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -44,7 +47,28 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-url': false,
+        'postcss-custom-properties': {
+          preserve: false
+        },
+        // 'postcss-nested': false,
+        // 'postcss-responsive-type': false,
+        // 'postcss-hexrgba': false
+      },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
+  },
   env: {
     SUPABASE_URL: process.env.SUPABASE_URL || 'http://localhost:3000',
     SUPABASE_KEY: process.env.SUPABASE_KEY || ''
