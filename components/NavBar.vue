@@ -5,6 +5,7 @@
       <b-navbar-item tag="router-link" :to="{ path: 'agenda' }"> Agenda </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'whoarewe' }"> Quienes somos </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'where' }"> Dónde estamos </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'network' }"> Redes sociales </b-navbar-item>
       <b-navbar-item tag="router-link" :to="{ name: 'library' }"> Biblioteca </b-navbar-item>
       <b-navbar-dropdown label="Editar" v-if="authenticated">
         <b-navbar-item tag="router-link" :to="{ name: 'my-posts' }"> Mis entradas </b-navbar-item>

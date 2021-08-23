@@ -1,9 +1,9 @@
 <template>
   <div class="footer content has-text-centered">
     <p class="social-footer">
-      Puedes encontrarnos en:
-      <span class="block">
-        <a :href="s.url" v-for="s in social" :key="s.icon">
+      <span> Puedes encontrarnos en: </span>
+      <span class="social-footer-icons">
+        <a :href="s.link" v-for="s in social" :key="s.icon">
           <b-icon :icon="s.icon" size="is-large" type="is-success"> </b-icon>
         </a>
       </span>
@@ -22,20 +22,18 @@
 </template>
 
 <script>
+import { digitalSN } from '../store/social_network';
 export default {
   name: 'Footer',
   data() {
     return {
-      social: [
-        {
-          title: 'Facebook',
-          icon: 'facebook',
-          url: 'https://www.facebook.com/Huertodromo/'
-        }
-      ]
+      social: digitalSN
     };
   }
 };
 </script>
-<style scoped>
+<style>
+.social-footer-icons {
+  vertical-align: middle;
+}
 </style>

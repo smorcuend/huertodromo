@@ -1,7 +1,7 @@
 <template>
   <main>
     <section class="section card">
-      <h1 class="title">Agenga</h1>
+      <h1 class="title">Agenda</h1>
       <div class="columns">
         <div class="column">
           <vue-cal
