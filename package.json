@@ -13,7 +13,7 @@
     "postversion": "rm -rf dist/"
   },
   "name": "nuxt-supabase",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "gpl-3.0",
   "dependencies": {
     "@nuxt/core": "^2.15.7",
