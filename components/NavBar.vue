@@ -1,17 +1,18 @@
 <template>
   <b-navbar fixed-top centered type="is-success">
     <template #start>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }"> Inicio </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ path: 'agenda' }"> Agenda </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'whoarewe' }"> Quienes somos </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'where' }"> Dónde estamos </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'network' }"> Redes sociales </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="{ name: 'library' }"> Biblioteca </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="'/'"> Inicio </b-navbar-item>
+      <b-navbar-dropdown label="Proyecto">
+        <b-navbar-item tag="router-link" :to="{ name: 'project-whoarewe' }"> Quienes somos </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: '/project/where' }"> Dónde estamos </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ path: '/project/plano' }"> Plano </b-navbar-item>
+      </b-navbar-dropdown>
+      <b-navbar-item tag="router-link" :to="'agenda'"> Agenda </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="'network'"> Redes sociales </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="'library'"> Biblioteca </b-navbar-item>
       <b-navbar-dropdown label="Editar" v-if="authenticated">
         <b-navbar-item tag="router-link" :to="{ name: 'my-posts' }"> Mis entradas </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ name: 'create-post' }">
-          Crear entrada
-        </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'create-post' }"> Crear entrada </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'profile' }"> Perfil </b-navbar-item>
       </b-navbar-dropdown>
     </template>
