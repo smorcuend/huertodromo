@@ -2,7 +2,7 @@
   <section class="section card">
     <h1 class="title">Bitácora</h1>
     <div class="columns">
-      <div class="column" v-if="!profile">
+      <div class="column" v-if="profile">
         <div class="fields">
           <b-field label="Content" label-position="inside">
             <b-input v-model="newlog.content" type="textarea" />
@@ -63,15 +63,13 @@ export default {
   },
   methods: {
     async createLog() {
-      const {content} = this.newlog
-      if (!title || !content) return
-      const user = this.$supabase.auth.user()
+      const { content } = this.newlog;
+      if (!title || !content) return;
+      const user = this.$supabase.auth.user();
       const { data } = await this.$supabase
-        .from('posts')
-        .insert([
-            { title, content, user_id: user.id, user_email: user.email }
-        ])
-        .single()
+        .from('logbook')
+        .insert([{ content, user_id: user.id, user_email: user.email }])
+        .single();
     }
   },
   async mounted() {
