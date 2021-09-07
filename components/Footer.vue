@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { digitalSN } from '../store/social_network';
+import { digitalSN } from '../static/social_network';
 export default {
   name: 'Footer',
   data() {

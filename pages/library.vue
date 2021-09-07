@@ -26,6 +26,7 @@ import Asamblea from './library/asamblea.vue';
 import Huerto from './library/huerto.vue';
 import Botanic from './library/botanic.vue';
 export default {
+  name: 'library',
   components: {
     Asamblea,
     Huerto,
