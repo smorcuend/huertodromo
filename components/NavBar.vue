@@ -4,12 +4,13 @@
       <b-navbar-item tag="router-link" :to="'/'"> Inicio </b-navbar-item>
       <b-navbar-dropdown label="Proyecto">
         <b-navbar-item tag="router-link" :to="{ name: 'project-whoarewe' }"> Quienes somos </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/project/where' }"> Dónde estamos </b-navbar-item>
-        <b-navbar-item tag="router-link" :to="{ path: '/project/plano' }"> Plano </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'project-where' }"> Dónde estamos </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'project-plano' }"> Plano </b-navbar-item>
+        <b-navbar-item tag="router-link" :to="{ name: 'project-bitacora' }"> Bitácora </b-navbar-item>
       </b-navbar-dropdown>
-      <b-navbar-item tag="router-link" :to="'agenda'"> Agenda </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="'network'"> Redes sociales </b-navbar-item>
-      <b-navbar-item tag="router-link" :to="'library'"> Biblioteca </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'agenda' }"> Agenda </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'network' }"> Redes sociales </b-navbar-item>
+      <b-navbar-item tag="router-link" :to="{ name: 'library' }"> Biblioteca </b-navbar-item>
       <b-navbar-dropdown label="Editar" v-if="authenticated">
         <b-navbar-item tag="router-link" :to="{ name: 'my-posts' }"> Mis entradas </b-navbar-item>
         <b-navbar-item tag="router-link" :to="{ name: 'create-post' }"> Crear entrada </b-navbar-item>

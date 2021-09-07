@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import {digitalSN, linkSN} from '../store/social_network';
+import {digitalSN, linkSN} from '../static/social_network';
 export default {
   async created() {},
   data() {
