@@ -64,12 +64,13 @@ export default {
   methods: {
     async createLog() {
       const { content } = this.newlog;
-      if (!title || !content) return;
+      if (!content) return;
       const user = this.$supabase.auth.user();
       const { data } = await this.$supabase
         .from('logbook')
         .insert([{ content, user_id: user.id, user_email: user.email }])
         .single();
+      console.log(data);
     }
   },
   async mounted() {
