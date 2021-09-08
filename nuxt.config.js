@@ -27,14 +27,15 @@ export default {
   plugins: [
     { src: '~plugins/client.js' },
     { src: '~plugins/simplemde.js', mode: 'client' },
-    { src: '~plugins/vuecal.js' }
+    { src: '~plugins/vuecal.js' },
+    { src: '~plugins/Dayjs.ts' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ['@nuxt/typescript-build'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
@@ -48,6 +49,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config) {
+      config.resolve.alias.vue = 'vue/dist/vue.common';
+    },
     postcss: {
       // Add plugin names as key and arguments as value
       // Install them before as dependencies with npm or yarn
@@ -56,7 +60,7 @@ export default {
         'postcss-url': false,
         'postcss-custom-properties': {
           preserve: false
-        },
+        }
         // 'postcss-nested': false,
         // 'postcss-responsive-type': false,
         // 'postcss-hexrgba': false
