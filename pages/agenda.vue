@@ -4,17 +4,14 @@
       <h1 class="title">Agenda</h1>
       <div class="columns">
         <div class="column">
-          <vue-cal
-            :time-from="9 * 60"
-            :disable-views="['years', 'year']"
-            active-view="month"
-            hide-weekends
-            events-on-month-view="short"
-            :events="events"
-            style="height: 600px"
-            locale="es"
-          >
-          </vue-cal>
+          <iframe
+            :src="externalCalendarSrc"
+            style="border: solid 1px #777"
+            :width="externalCalendarSize.w"
+            :height="externalCalendarSize.h"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -28,6 +25,9 @@ export default {
   async created() {},
   data() {
     return {
+      externalCalendarSize: {w: 1024, h: 600},
+      externalCalendarSrc:
+        'https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Europe%2FMadrid&src=cWx2bnFqYnRvamRqbTY1Mmp0ZWo4amhlbHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23F09300',
       loaded: false,
       events: [
         {

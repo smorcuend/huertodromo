@@ -19,21 +19,21 @@ export default {
   data() {
     return {
       data: [
-        {
-          id: 2,
-          date: '2021-08-18 18:00',
-          title: 'Asamblea general verano',
-          description:
-            'Asamblea general verano 2021. Presentación nuevos hortelanos. Invitados: Huertos de ocio de Olias del Rey',
-          people: 8
-        },
-        {
-          id: 1,
-          date: '2021-08-18 18:00',
-          title: 'Asamblea general preverano',
-          description: 'Asamblea general pre verano 2021. Presentación nuevos miembros',
-          people: 8
-        }
+        // {
+        //   id: 2,
+        //   date: '2021-08-18 18:00',
+        //   title: 'Asamblea general verano',
+        //   description:
+        //     'Asamblea general verano 2021. Presentación nuevos hortelanos. Invitados: Huertos de ocio de Olias del Rey',
+        //   people: 8
+        // },
+        // {
+        //   id: 1,
+        //   date: '2021-08-18 18:00',
+        //   title: 'Asamblea general preverano',
+        //   description: 'Asamblea general pre verano 2021. Presentación nuevos miembros',
+        //   people: 8
+        // }
       ],
       columns: [
         {
